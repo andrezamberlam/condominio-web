@@ -3,6 +3,10 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 import { isAuthenticated } from "./services/auth";
 
+import SingUp from "./pages/SingUp";
+import SingIn from "./pages/SingIn";
+// import GlobalStyle from 'styled-components';
+
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
@@ -19,8 +23,8 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 const Routes = () => (
   <BrowserRouter>
     <Switch>
-      <Route exact path="/" component={() => <h1>Login</h1>} />
-      <Route path="/signup" component={() => <h1>SignUp</h1>} />
+      <Route exact path="/" component={SingIn} />
+      <Route path="/singup" component={SingUp} />
       <PrivateRoute path="/app" component={() => <h1>App</h1>} />
       <Route path="*" component={() => <h1>Page not found</h1>} />
     </Switch>
