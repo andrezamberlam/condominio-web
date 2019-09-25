@@ -145,11 +145,13 @@ class Condominio extends Component {
                         <div className="flex-large">
                             <h2></h2>
                             {this.state.error && <p>{this.state.error}</p>}
+                            Numero do Apartamento
                             <input
                                 type="number"
                                 placeholder="Numero"
                                 onChange={e => this.setState({ numeroadd: e.target.value })}
                             />
+                            Bloco
                             <input
                                 type="text"
                                 placeholder="Bloco"
@@ -163,6 +165,8 @@ class Condominio extends Component {
                                                 <input type="checkbox" value={pes.idpessoa} onChange={e => this.handleChange(e, this)}></input>
                                             </td>
                                             <td>{pes.nome}</td>
+                                            <td>{pes.email}</td>
+                                            <td>{pes.telefone}</td>
                                         </tr>
                                     ))
                                 }
