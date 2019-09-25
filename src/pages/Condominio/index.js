@@ -170,7 +170,7 @@ class Condominio extends Component {
                             <button onClick={this.handleAdd} >Cadastrar Apartamento</button>
                         </div>
                         <div className="flex-large">
-                            <h2>Apartamentos</h2>
+                            <h2>Apartamentos Cadastrados</h2>
                             <div className="tabelaOverflow">
                                 <Apartamentos apartamentos={this.state.apartamentos} />
                             </div>
