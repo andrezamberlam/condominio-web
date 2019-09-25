@@ -5,6 +5,7 @@ import { isAuthenticated } from "./services/auth";
 
 import SingUp from "./pages/SingUp";
 import SingIn from "./pages/SingIn";
+import Condominio from './pages/Condominio'
 // import GlobalStyle from 'styled-components';
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
@@ -25,7 +26,7 @@ const Routes = () => (
     <Switch>
       <Route exact path="/" component={SingIn} />
       <Route path="/singup" component={SingUp} />
-      <PrivateRoute path="/app" component={() => <h1>App</h1>} />
+      <PrivateRoute path="/app" component={Condominio} />
       <Route path="*" component={() => <h1>Page not found</h1>} />
     </Switch>
   </BrowserRouter>
